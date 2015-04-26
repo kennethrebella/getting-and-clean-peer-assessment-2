@@ -1,0 +1,36 @@
+
+# Codebook 
+
+### Data Frames
+
+**feature_names** - A data frame created from reading the features.txt file    
+**subset** - columns that are related to means and standard deviation  
+**train** -  A data frame created from reading the X_train.txt file    
+**train_subset** - a data frame create from subsettng *train* with *subset*    
+**test** - A data frame created from reading the X_test.txt file.   
+**test_subset** -a data frame create from subsettng *test* with *subset*   
+**merged_x** - A data frame created from merging *test_subset* and *train_subset*  
+**train_y** -  A data frame created from reading theY_train.txt file      
+**test_y** - A data frame created from reading the Y_test.txt file.   
+**test_subset** -A data frame create from subsettng *test* with *subset*   
+**merged_y** - A data frame created from merging *test_y* and *train_y*   
+**activity_labels** - A data frame created from reading activity_labels.txt  
+**train_subjects** - a data frame created from reading subject_train.txt  
+**test_subjects** - a data frame created from reading subject_test.txt  
+**merged_subjects** - a data frame merging *test_subjects* and *train_subjects*  
+**sub_act** - a data frame created by merging *merged_subjects* and *merged_activities$activity*  
+**final** - a data frame merging *sub_act* and *merged_x*  
+**result** - the *final* data frame aggregated by *subject_id* and *activity_id*   
+
+
+### Process
+
+1. Combine data from the original training and test datasets into one dataset  
+2. I then extracted the subset based on means and standard deviation
+3. Added activities and subjects to a single data frame 
+
+### Result 
+
+I then wrote the tidy data to a file called "final_data.txt"
+
+
